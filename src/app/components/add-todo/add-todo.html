@@ -1,0 +1,31 @@
+<form
+  id="add_todo"
+  class="shadow-2"
+  [ngStyle]="{'background-color': todo.color}" >
+    <input
+      type="text"
+      [(ngModel)]="todo.title"
+      name="todoTitle"
+      placeholder="Title"
+      class="todo-title" >
+    <input
+      type="text"
+      [(ngModel)]="todo.description"
+      name="newNoteValue"
+      placeholder="Details"
+      class="todo-description" >
+    <div class="todo-btn">
+      <div class="color-picker">
+        <color-picker
+          [colors]="colors"
+          (selectedColor)="onColorSelect($event)">
+        </color-picker>
+      </div>
+      <button
+        (click)="addTodo()"
+        type="submit"
+        class="btn-light" >
+          Done
+      </button>
+    </div>
+</form>

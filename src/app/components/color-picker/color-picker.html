@@ -1,0 +1,10 @@
+<div class="color-selector">
+  <span class="material-icons icon" (click)="openPicker()">color</span>
+  <div class="selector row center-xs" *ngIf="isPickerOpen" >
+    <div
+      class="color"
+      *ngFor="let color of colors"
+      [ngStyle]="{'background-color': color}"
+      (click)="selectColor(color)"></div>
+  </div>
+</div>

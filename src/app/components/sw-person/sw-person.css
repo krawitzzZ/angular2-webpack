@@ -1,0 +1,25 @@
+.sw-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 36px;
+  margin: 20px auto;
+}
+
+.detail-info {
+  padding: 5px 20px;
+  margin: 10px auto;
+}
+
+.back-btn {
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid grey;
+  font-size: 16px;
+  cursor: pointer;
+}

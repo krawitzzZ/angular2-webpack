@@ -1,0 +1,22 @@
+<div *ngIf="people" class="sw-people-main">
+  <h1>Star Wars characters</h1>
+  <ul class="sw-people">
+    <li *ngFor="let person of people" class="person shadow-1" >
+      <a (click)="goToPerson(person)" class="person-link" role="button">{{ person.name }}</a>
+    </li>
+  </ul>
+  <div class="page-navigation">
+    <button
+      [disabled]="!previous"
+      (click)="goToPreviousPage()"
+      class="navigation-btn shadow-1">
+        Previous
+    </button>
+    <button
+      [disabled]="!next"
+      (click)="goToNextPage()"
+      class="navigation-btn shadow-1">
+        Next
+    </button>
+  </div>
+</div>

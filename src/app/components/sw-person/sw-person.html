@@ -1,0 +1,28 @@
+<div *ngIf="person" class="sw-person">
+  <h1>{{ person.name }} details</h1>
+  <ul class="details">
+    <li class="detail-info">
+      {{ person.name }} was born in {{ person.birth_year }} year.
+    </li>
+    <li *ngIf="person.gender === 'male'" class="detail-info">
+      He has {{ person.eye_color }} eyes color
+      <span *ngIf="person.hair_color !== 'none'" >
+        and {{ person.hair_color }} hair color</span>.
+    </li>
+    <li *ngIf="person.gender === 'female'" class="detail-info">
+      She has {{ person.eye_color }} eyes color
+      <span *ngIf="person.hair_color !== 'none'" >
+        and {{ person.hair_color }} hair color</span>.
+    </li>
+    <li *ngIf="person.gender === 'male'" class="detail-info">
+      His skin color is {{ person.skin_color }}.
+    </li>
+    <li *ngIf="person.gender === 'female'" class="detail-info">
+      Her skin color is {{ person.skin_color }}.
+    </li>
+    <li class="detail-info">
+      This person participated in {{ person.films.length }} Stars Wars movies.
+    </li>
+  </ul>
+  <button (click)="goToList()" class="back-btn shadow-1">Back To List</button>
+</div>

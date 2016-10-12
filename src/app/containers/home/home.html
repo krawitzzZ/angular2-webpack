@@ -1,0 +1,12 @@
+<div>
+  <h1>Hello from Angular 2 with Webpack</h1>
+  <br/>
+  <label *ngIf="!loggedIn" for="name">Name yourself!
+    <input [(ngModel)]="input" (keyup.enter)="login()">
+    <button (click)="login()" class="btn-light border">
+      Here I am!
+    </button>
+  </label>
+  <p *ngIf="loggedIn" class="hello" >Hello, {{ username }}!</p>
+  <img src="../../../assets/img/angular-logo.png">
+</div>

@@ -1,0 +1,10 @@
+<div id="todos">
+  <add-todo class="creator" (newTodo)="createTodo($event)"></add-todo>
+  <div class="todos">
+    <todo
+      *ngFor="let todo of todos"
+      [todo]="todo"
+      (checked)="completeTodo($event)" >
+    </todo>
+  </div>
+</div>

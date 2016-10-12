@@ -1,0 +1,15 @@
+<div
+  class="todo shadow-1"
+  [ngStyle]="{'background-color': todo.color}"
+  (mouseenter)="toggleCheck()"
+  (mouseleave)="toggleCheck()" >
+    <div class="icon" *ngIf="showCheck" (click)="onCheck()">
+      <i>&times;</i>
+    </div>
+    <div class="title">
+      {{ todo.title }}
+    </div>
+    <div class="value">
+      {{ todo.description }}
+    </div>
+</div>
